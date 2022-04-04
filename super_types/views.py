@@ -17,7 +17,7 @@ from django.shortcuts import get_object_or_404
 def super_type_list(request):
 
     appending_dict_example = {}
-    appending_dict_example['name'] = 'Bob'
+    appending_dict_example['name'] = 'Dev'
     print(appending_dict_example)
 
     super_types = Super_type.objects.all()
