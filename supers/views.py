@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-from super_types.views import Super_type, super_type_list
+from super_types.views import Super_type
 from .serializers import SuperSerializer
 from .models import Super
 
@@ -13,7 +13,7 @@ from .models import Super
 def supers_list(request):
     if request.method == 'GET':
         custom_response_dictionary = {}
-        type_param = request.query_params.get('Villain', 'Hero')
+        type_param = request.query_params.get('Type')
         supers = Super.objects.all() 
 
         if type_param:
