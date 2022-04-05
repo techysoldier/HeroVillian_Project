@@ -13,7 +13,7 @@ from .models import Super
 def supers_list(request):
     if request.method == 'GET':
         custom_response_dictionary = {}
-        type_param = request.query_params.get('Type')
+        type_param = request.query_params.get('type')
         supers = Super.objects.all() 
 
         if type_param:
