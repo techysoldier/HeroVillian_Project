@@ -10,7 +10,7 @@ from supers.serializers import SuperSerializer
 def super_type_list(request):
 
     appending_dict_example = {}
-    appending_dict_example['name'] = 'villian'
+    appending_dict_example['type'] = 'villian'
     print(appending_dict_example)
 
     super_types = Super_type.objects.all()
